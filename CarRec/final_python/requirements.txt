@@ -1,4 +1,0 @@
-easyocr
-opencv-python
-opencv-python-headless
-sqlite3
