@@ -1,0 +1,76 @@
+1. hamu datay person
+
+select * from person;
+---------------------------
+
+2. zanyary person by name
+
+SELECT *
+FROM person
+WHERE name = '?';
+-----------------------------
+3. by username
+SELECT *
+FROM person
+WHERE username= '?';
+------------------------------
+4. by phone
+SELECT *
+FROM person
+WHERE phone= '?';
+-------------------------------
+5.Count of Admins vs Users
+SELECT role, COUNT(*) AS total
+FROM person
+GROUP BY role;
+
+-------------------------------
+		sayara
+
+1. hamuy
+select * from vehicle;
+--------------------------
+2. by plate
+SELECT *
+FROM vehicle
+WHERE PlateNumber= '?';
+-------------------------
+3. by model
+SELECT *
+FROM vehicle
+WHERE Model= '?';
+------------------------
+4. by brand
+SELECT *
+FROM vehicle
+WHERE Brand= '?';
+
+5. Get Truck Info Along With Basic Vehicle Infoy
+
+SELECT v.id, v.Name, v.Brand, v.Color, t.TruckType, t.LoadCapacity
+FROM vehicle v
+JOIN truck t ON v.id = t.vehicle_id;
+---------------------------------------
+6.Show Vehicle Insertions Made in the Last 7 Days
+SELECT * FROM vehicle_history
+WHERE action = 'INSERT'
+AND timestamp >= NOW() - INTERVAL 7 DAY;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
