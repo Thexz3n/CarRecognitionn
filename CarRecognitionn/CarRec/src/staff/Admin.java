@@ -1,7 +1,7 @@
 package staff;
 
-import cars.Cars;
-import cars.Truck;
+import backendcarregon.cars.Cars;
+import backendcarregon.cars.Truck;
 import java.sql.*;
 import java.util.Scanner;
 import javax.swing.JOptionPane;

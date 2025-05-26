@@ -1,8 +1,5 @@
 package staff;
 
-
-import cars.Cars;
-import cars.Truck;
 import java.sql.*;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -163,13 +160,11 @@ public class User implements Employee {
         System.out.println("Welcome to the Employee Management System");
         System.out.println("1. Create Employee");
         System.out.println("2. Update Employee");
-        System.out.println("3. Add a new cars");
-        System.out.println("4. Add a new Trucks");
-        System.out.println("5. Search Employee by ID");
-        System.out.println("6. Search Employee by Full Name");
-        System.out.println("7. Search Employee by Phone Number");
-        
-        System.out.println("8. Exit");
+        System.out.println("3. Delete Employee");
+        System.out.println("4. Search Employee by ID");
+        System.out.println("5. Search Employee by Full Name");
+        System.out.println("6. Search Employee by Phone Number");
+        System.out.println("7. Exit");
         System.out.print("Choose an option: ");
         int choice = user.nextInt();
         user.nextLine(); // Consume leftover newline
@@ -182,23 +177,18 @@ public class User implements Employee {
                 updateInput();
                 break;
             case 3:
-                Cars ca = new Cars();
-                ca.inputDetaile();
+                deleteInput();
                 break;
             case 4:
-                Truck c = new Truck();
-                c.inputDetaile();
-                break;
-            case 5:
                 searchingByID();
                 break;
-            case 6:
+            case 5:
                 searchingByFullname();
                 break;
-            case 7:
+            case 6:
                 searchingByPhone();
                 break;
-            case 8:
+            case 7:
                 System.out.println("Exiting...");
                 System.exit(0);
                 break;

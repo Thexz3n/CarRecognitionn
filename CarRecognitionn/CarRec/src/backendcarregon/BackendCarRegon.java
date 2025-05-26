@@ -1,10 +1,10 @@
 package backendcarregon;
-import staff.Login;
+import staff.log;
 public class BackendCarRegon {
     public static void main(String[] args) {
 
         // Person person = new Person();
-        Login login = new Login();
+        log login = new log();
 
     }
 
